@@ -43,10 +43,7 @@ export interface Element {
 
 
 export class MainComponentComponent implements OnInit {
-  // @ViewChild('toAmtId', { static: false})
-  // toAmtId: ElementRef;
-  // @ViewChild('firstNameInput', { static: false})
-  // firstNameInput: ElementRef;
+ 
 
   end$: Observable<any>;
   objectForm: FormGroup;
@@ -83,6 +80,12 @@ export class MainComponentComponent implements OnInit {
   columnNames= GLOBAL_CONST.TABLES.HISTORY_TABLE.TABLE_HEADER;
   currency = GLOBAL_CONST.SELECT_VALUE.currency;
 
+  public disclaimer : string = GLOBAL_CONST.TEXTS.DISCLAIMER_LABEL;
+  public toAmountLabel : string = GLOBAL_CONST.TEXTS.TO_AMT_LABEL;
+  public fromAmount : string = GLOBAL_CONST.TEXTS.FROM_AMT;
+  public pageLabel : string =GLOBAL_CONST.TEXTS.CONVERTOR_LABEL;
+  public historyHeader: string = GLOBAL_CONST.TEXTS.HISTORY_TABLE_HEADER;
+
 
   constructor(private currSer: CurrencyService,private router: Router, private serializer: UrlSerializer,public store: Store<fromRoot.State>) {
       this.amount$ = store.select(fromRoot.getAmountState);
@@ -106,26 +109,12 @@ export class MainComponentComponent implements OnInit {
 
   onSelection(e, v){
     this.fromCurr = e.value;
-    // if(this.toAmtId){
-    //   this.toAmtId.nativeElement.value=' ';
-    // }
-    // if(this.firstNameInput){
-    //   this.firstNameInput.nativeElement.value=' ';
-    // }
-
     this.store.dispatch(new FromCurrencyChangeAction(this.fromCurr));
     this.store.dispatch(new CountChangeAction(this.count));
    }
 
    onSelection2(e, v){
     this.toCurr = e.value;
-    // if(this.toAmtId){
-    //   this.toAmtId.nativeElement.value=' ';
-    // }
-    // if(this.firstNameInput){
-    //   this.firstNameInput.nativeElement.value=' ';
-    // }
-
     this.store.dispatch(new ToCurrencyChangeAction( this.toCurr));
    }
 
