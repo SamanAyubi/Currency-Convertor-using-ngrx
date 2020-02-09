@@ -177,17 +177,17 @@ public createQuery(queryObject): string {
 
     this.subscription = this.toVal$.subscribe(data =>{
       this.toCurr= data;
-      console.log('this.toVal$',data);
+    
     });
 
     this.subscription = this.fromVal$.subscribe(data =>{
       this.fromCurr= data;
-      console.log('this.toVal$',data);
+    
     });
 
     this.subscription = this.count$.subscribe(data =>{
       this.count= data;
-      console.log('this.count$',data);
+      
     });
 
     this.count = this.count +1;
@@ -232,9 +232,7 @@ public createQuery(queryObject): string {
         //calling the create table method.
       this.createTable(this.tempArr);
 }
-else{
-// write validation code here, to diplay red border in dropdown and error message
-}
+
   }
 
 
