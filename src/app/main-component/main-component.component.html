@@ -1,0 +1,126 @@
+
+<div >
+    <mat-card  class="main-page">
+      <div align="center" class="card-container-title">Currency Converter</div>
+    <div class= "divCls" align="center">
+
+      <!-- <mat-card class="card-container">
+
+    <div class="row">
+     <span class="column">
+      <div class="form-group"style="background-color:#fff;">
+        <label for="alterEgo">From Amount</label>
+         <div>
+        <input  [ngModel]='amount$ | async' (ngModelChange)="onAmountChange($event)" >
+
+        </div>
+      </div>
+     </span>
+     <span class="column">
+      <div class="column" style="background-color:#fff;">
+        <mat-form-field appearance="outline">
+          <mat-select panelClass="my-panel" [ngModel]='fromCurr$ | async' #curren1 (selectionChange)="onSelection($event, curren1.selectedOptions)"  required>
+           <mat-option *ngFor="let curren of currency" [value]="curren.value">
+             {{curren.viewValue}}
+           </mat-option>
+         </mat-select>
+        </mat-form-field>
+      </div>
+     </span>
+
+
+    </div>
+    <div class="row">
+      <span class="column">
+        <div  class="form-group"style="background-color:#fff;">
+          <label for="alterEgo">To Amount</label>
+         <ng-template ngFor let-query [ngForOf]="(queryAmt$ | async)|| ' '" >
+          <input value="{{ query.value * (amount$ | async) }}"/>
+         </ng-template>
+
+
+        </div>
+      </span>
+      <span class="column">
+      <div style="background-color:#fff;">
+        <mat-form-field appearance="outline">
+          <mat-select panelClass="my-panel" [ngModel]='toCurr$ | async' #curren2 (selectionChange)="onSelection2($event, curren2.selectedOptions)"  required>
+            <mat-option *ngFor="let curren of currency" [value]="curren.value">
+              {{curren.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      </span>
+    </div>
+
+      <a class="sideLink"
+      (click)="click()" >Disclaimer</a>
+
+  </mat-card>
+</div> -->
+
+      <mat-card class="card-container">
+
+         <div class="row">
+          <span class="column">
+           <div class="form-group"style="background-color:#fff;">
+             <label for="alterEgo">From Amount</label>
+              <div>
+             <input  [ngModel]='amount$ | async' (ngModelChange)="onAmountChange($event)" >
+
+             </div>
+           </div>
+          </span>
+          <span class="column">
+           <div class="column" style="background-color:#fff;">
+             <mat-form-field appearance="outline">
+               <mat-select panelClass="my-panel" [ngModel]='fromCurr$ | async' #curren1 (selectionChange)="onSelection($event, curren1.selectedOptions)"  required>
+                <mat-option *ngFor="let curren of currency" [value]="curren.value">
+                  {{curren.viewValue}}
+                </mat-option>
+              </mat-select>
+             </mat-form-field>
+           </div>
+          </span>
+
+
+         </div>
+         <div class="row">
+           <span class="column">
+             <div  class="form-group"style="background-color:#fff;">
+               <label for="alterEgo">To Amount</label>
+              <ng-template ngFor let-query [ngForOf]="(queryAmt$ | async)|| ' '" >
+               <input value="{{ query.value * (amount$ | async) }}"/>
+              </ng-template>
+
+
+             </div>
+           </span>
+           <span class="column">
+           <div style="background-color:#fff;">
+             <mat-form-field appearance="outline">
+               <mat-select panelClass="my-panel" [ngModel]='toCurr$ | async' #curren2 (selectionChange)="onSelection2($event, curren2.selectedOptions)"  required>
+                 <mat-option *ngFor="let curren of currency" [value]="curren.value">
+                   {{curren.viewValue}}
+                 </mat-option>
+               </mat-select>
+             </mat-form-field>
+           </div>
+           </span>
+         </div>
+         <!-- <button (click)="click()">Disclaimer -->
+           <a class="sideLink"
+           (click)="click()" >Disclaimer</a>
+        <!-- // </button> -->
+       </mat-card>
+     </div>
+
+     <div align="center" class="table-div">
+     <mat-card class="table-card-container">
+       <div align="center" class="table-container-title">Transaction History Data</div>
+       <app-data-table [dataSource]="dataSource"></app-data-table>
+     </mat-card>
+     </div>
+     </mat-card>
+     </div>

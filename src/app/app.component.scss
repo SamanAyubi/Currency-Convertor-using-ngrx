@@ -1,0 +1,38 @@
+.row {
+   // width: 500px;
+}
+
+.column{
+    width: 250px !important;
+    display: inline-block;
+}
+
+
+.card-container {
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    align-content:center ;
+    padding: 20px;
+    border: 1px solid #dedede;
+} 
+
+.table-div{
+    margin-top: 40px !important;
+    padding: 50px;
+}
+
+.card-container-title {
+   // margin-left: 54px;
+    color: #606060;
+    font-size: 35px;
+    padding: 20px;
+    font-weight: bold;
+  }
+
+  .main-page{
+      top: 150px;
+      width: 80%;
+      padding: 30px;
+      margin-left: 150px;
+      }

@@ -1,0 +1,100 @@
+@import "../theme.scss";
+
+// .row {
+//     // width: 500px;
+//  }
+ 
+ .column{
+     width: 250px !important;
+     display: inline-block;
+ }
+ 
+ 
+ .card-container {
+     width: 50%;
+     background-color: $whiteColor;
+     border-radius: 10px;
+     align-content:center ;
+     padding: 20px;
+     border: 1px solid $primaryColor;
+     -webkit-box-shadow: 0 10px 6px -6px $shadowColor;
+     -moz-box-shadow: 0 10px 6px -6px $shadowColor;
+          box-shadow: 0 10px 6px -6px $shadowColor;
+ } 
+ 
+ .table-div{
+     margin-top: 40px !important;
+     padding: 50px;
+ }
+ 
+ .card-container-title {
+    
+     color: $primaryColor;
+     font-size: 35px;
+     padding: 20px;
+     font-weight: bold;
+     
+   }
+
+   .table-card-container{
+    background-color: $whiteColor;
+    border-radius: 10px;
+    align-content:center ;
+    padding: 20px;
+    border: 1px solid $primaryColor;
+    -webkit-box-shadow: 0 10px 6px -6px $shadowColor;
+    -moz-box-shadow: 0 10px 6px -6px $shadowColor;
+         box-shadow: 0 10px 6px -6px $shadowColor;
+
+   }
+
+   .table-container-title{
+    color: $primaryColor;
+     font-size: 25px;
+     padding: 20px;
+     font-weight: bold;
+   }
+.output-box{
+    border: 1px solid $secondaryColor;
+    height : 30px;
+}
+  
+ 
+   .main-page{
+    top: 150px;
+    width: 80%;
+    padding: 30px;
+    margin-left: 150px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+    }
+
+       .sideLink{
+           float: right;
+           color: $primaryColor;
+           text-decoration: underline;
+           margin-top: -25px !important;
+       }
+
+       .inputCls{
+           border: 1px solid $secondaryColor;
+           height :20px;
+           border-radius: 4px;
+           margin-top: 5px;
+       }
+
+
+       ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: $secondaryColor;
+    }
+
+    .inputLabel{
+        color: $secondaryColor;  
+    }
+
+      
